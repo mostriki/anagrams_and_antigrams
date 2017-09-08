@@ -14,10 +14,14 @@ _Create a method that can recognize and verify anagrams and antigrams._
 |----------------------------------------------------------------|----------------------------------------------|--------|
 | Check if two words are anagrams.                               | "ruby" and "bury"                            | true   |
 | Check if anagrams have different cases and are still anagrams. | "Tea" and "Eat"                              | true   |
-| Check if a word is an anagram and also a palindrome.           | "Animal" and "Lamina"                        | true   |
-| Check if the inputs contain a, i, e, o, u or y.                | "rb" and "br"                                | false  |
-| Check if two words are 'antigrams'.                            | "ruby" and "stab"                            | true   |
 | Account for multiple words being anagrams or 'antigrams'.      | "A decimal point." and "I'm a dot in place." | true   |
+| Check if the inputs contain a, i, e, o, u or y.                | "rb" and "br"                                | "You need to input actual words!"  |
+| Check if a word is an anagram and also a palindrome.           | "Animal" and "Lamina"                        | "Congratulations. Your anagrams make a palindrome too."   |
+| Check if two words are 'antigrams'.                            | "ruby" and "stab"                            | "These words have no letter matches and are antigrams."   |
+
+
+
+
 
 ## Setup/Installation Requirements
 
