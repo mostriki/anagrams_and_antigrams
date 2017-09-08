@@ -9,9 +9,9 @@ describe ('#ana') do
     expect(angram.ana("ruby", "bury")).to(eq(true))
   end
 
-  # it ("check if anagrams have different cases and are still anagrams.") do
-  #   expect(angram.ana("Tea", "Eat")).to(eq(true))
-  # end
+  it ("check if anagrams have different cases and are still anagrams.") do
+    expect(angram.ana("Tea", "Eat")).to(eq(true))
+  end
 
   # it ("check if a word is an anagram and also a palindrome.") do
   #   expect(angram.ana("Animal", "Lamina")).to(eq(true))
