@@ -21,11 +21,11 @@ describe ('#ana') do
     expect(angram.ana("rb", "br")).to(eq("You need to input actual words!"))
   end
 
-  it ("check if a word is an anagram and also a palindrome.") do
-    expect(angram.ana("Animal", "Lamina")).to(eq("Congratulations. Your anagrams make a palindrome too."))
-  end
+  # it ("check if a word is an anagram and also a palindrome.") do
+  #   expect(angram.ana("Animal", "Lamina")).to(eq("Congratulations. Your anagrams make a palindrome too."))
+  # end
 
   # it ("check if two words are 'antigrams'.") do
   #   expect(angram.ana("ruby", "stab")).to(eq("These words have no letter matches and are antigrams."))
-  end
+  # end
 end
