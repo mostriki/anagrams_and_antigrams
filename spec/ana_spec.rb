@@ -13,6 +13,10 @@ describe ('#ana') do
     expect(angram.ana("Tea", "Eat")).to(eq(true))
   end
 
+  it ("account for multiple words being anagrams or 'antigrams'.") do
+    expect(angram.ana("A decimal point.", "I'm a dot in place.")).to(eq(true))
+  end
+  
   # it ("check if a word is an anagram and also a palindrome.") do
   #   expect(angram.ana("Animal", "Lamina")).to(eq(true))
   # end
@@ -25,7 +29,5 @@ describe ('#ana') do
   #   expect(angram.ana("ruby", "stab")).to(eq(true))
   # end
 
-  # it ("account for multiple words being anagrams or 'antigrams'.") do
-  #   expect(angram.ana("A decimal point.", "I'm a dot in place.")).to(eq(true))
-  # end
+
 end
