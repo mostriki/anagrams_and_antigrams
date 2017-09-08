@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
 
 class Anagrams
+  # def initialize(input, comparison)
+  #   @input = input
+  #   @comparison = comparison
+  # end
+
   def ana (input, comparison)
     input_count = input.count('aeiouy')
     comparison_count = comparison.count('aeiouy')
@@ -11,22 +16,20 @@ class Anagrams
     input = input.downcase.gsub(/[^a-z0-9]/i, '').split(//)
     comparison = comparison.downcase.gsub(/[^a-z0-9]/i, '').split(//)
 
+    if input.reverse == comparison
+      return "Congratulations. Your anagrams make a palindrome too."
+    end
+
     input_arr = input.sort
     comparison_arr = comparison.sort
 
-  if input_arr == comparison_arr
+    if input_arr == comparison_arr
       return true
     else
       return false
     end
+
+    
+
   end
 end
-
-
-input = "I'm a dot in place.".downcase.gsub(/[^a-z0-9]/i, '').split(//)
-inputArr = input.sort
-#
-# comparison = "A decimal point.".downcase.gsub(/[^a-z0-9]/i, '').split(//)
-# comparisonArr = comparison.sort
-#
-# "I'm a dot in place.".tr(/[^a-z0-9]/, '').downcase.split(//)
