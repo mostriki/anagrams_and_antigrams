@@ -13,7 +13,7 @@ describe ('#ana') do
     expect(angram.ana("Tea", "Eat")).to(eq(true))
   end
 
-  it ("account for multiple words being anagrams or 'antigrams'.") do
+  it ("account for multiple words being anagrams or 'antigrams.'") do
     expect(angram.ana("A decimal point.", "I'm a dot in place.")).to(eq(true))
   end
 

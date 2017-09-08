@@ -31,7 +31,7 @@ _Create a method that can recognize and verify anagrams and antigrams._
 
 ## Known Bugs
 
-_..._
+_Cannot check to see if a word is an "antigram."_
 
 ## Support and contact details
 
