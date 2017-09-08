@@ -16,9 +16,9 @@ class Anagrams
     input = input.downcase.gsub(/[^a-z0-9]/i, '').split(//)
     comparison = comparison.downcase.gsub(/[^a-z0-9]/i, '').split(//)
 
-    # if input.reverse == comparison
-    #   return "Congratulations. Your anagrams make a palindrome too."
-    # end
+    if input.reverse == comparison
+      return "Congratulations. Your anagrams make a palindrome too."
+    end
 
     input_arr = input.sort
     comparison_arr = comparison.sort
