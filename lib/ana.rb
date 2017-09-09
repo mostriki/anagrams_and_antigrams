@@ -1,23 +1,24 @@
 #!/usr/bin/env ruby
 
 class Anagrams
-  # def initialize(input, comparison)
-  #   @input = input
-  #   @comparison = comparison
-  # end
+  def initialize(input, comparison)
+    @input = input
+    @comparison = comparison
+  end
+
+  def word_check (word)
+    word.count('aeiouy') > 0
+  end
 
 # checks to see if it is a word.
-  def ana (input, comparison)
+  def ana
 
 # splits into an array of lowercase characters.
-    input_arr = input.downcase.gsub(/[^a-z0-9]/i, '').split(//)
-    comparison_arr = comparison.downcase.gsub(/[^a-z0-9]/i, '').split(//)
+    input_arr = @input.downcase.gsub(/[^a-z0-9]/i, '').split(//)
+    comparison_arr = @comparison.downcase.gsub(/[^a-z0-9]/i, '').split(//)
 
 # counts the vowels in a string
-    input_count = input.count('aeiouy')
-    comparison_count = comparison.count('aeiouy')
-
-    if input_count == 0 || comparison_count == 0
+    if word_check(@input) == false || word_check(@comparison) == false
       return "You need to input actual words!"
     end
 
