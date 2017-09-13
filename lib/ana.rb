@@ -1,6 +1,5 @@
-#!/usr/bin/env ruby
 
-class Anagrams
+class Anagram
 # initilization method for inputs
   def initialize(input, comparison)
     @input = input
@@ -12,39 +11,37 @@ class Anagrams
   end
 
 # method (check words for vowels)
-  def word_check (word)
-    word.count('aeiouy') > 0
+  def word_check?()
+    (@input && @comparison).count('aeiouy') > 0
   end
 
 # method (check if words make a palindrome)
-  def palindrom_check (input, comparison)
-    input.reverse == comparison
+  def palindrom_check?()
+    @input_arr.reverse == @comparison_arr
   end
 
 # method (check if words are antigrams)
-  def antigram_check(input, comparison)
+  def antigram_check?()
     (@input_sort & @comparison_sort).empty?
   end
 
 # method (check if words are anagrams)
+  def anagram_check?()
+    @input_sort == @comparison_sort
+  end
+
+# method (check if words are anagrams)
   def ana
-# checks for words
-    if word_check(@input) == false || word_check(@comparison) == false
+    if word_check? == false
       return "You need to input actual words!"
     end
-
-# checks to see if it is a palindrome.
-    if palindrom_check(@input_arr, @comparison_arr) == true
+    if palindrom_check? == true
       return "Congratulations. Your anagrams make a palindrome."
     end
-
-# checks to see if words make an anagram or an antigram.
-    if antigram_check(@input, @comparison) == true
+    if antigram_check? == true
       return "These words have no letter matches and are antigrams."
-    elsif @input_sort == @comparison_sort
-      true
-    else
-      false
+    elsif anagram_check?
+      return "Your words are anagrams!"
     end
   end
 end
